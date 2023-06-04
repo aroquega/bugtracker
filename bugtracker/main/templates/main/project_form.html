@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+<form action="{% url 'create_project' %}" method="post">
+    {% csrf_token %}
+    <label for="title">title</label>
+    <input id="title" name="title" type="text" />
+    <label for="description">description</label>
+    <input id="description" name="description" type="text" />
+    <input type="submit" name="Crear" />
+</form>
+{% endblock main %}

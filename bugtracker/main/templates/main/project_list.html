@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block main %}
+{% for project in projects %}
+    <div>
+        <h3>{{ project.title }}</h3>
+    </div>
+{% endfor %}
+<a href="{% url 'create_project' %}">Crear</a>
+{% endblock main %}
